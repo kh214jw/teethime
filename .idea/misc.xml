@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/YEONJI/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.215" />
+        <entry key="..\:/Users/YEONJI/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/brushingxml.xml" value="0.176" />
+        <entry key="..\:/Users/YEONJI/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/calanderxml.xml" value="0.176" />
+        <entry key="..\:/Users/YEONJI/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/homexml.xml" value="0.215" />
+        <entry key="..\:/Users/YEONJI/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.215" />
+        <entry key="..\:/Users/YEONJI/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/mapagexml.xml" value="0.215" />
+        <entry key="..\:/Users/YEONJI/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/teethbrushing.xml" value="0.239" />
+        <entry key="..\:/Users/YEONJI/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/teethbrushingxml.xml" value="0.239" />
+        <entry key="..\:/Users/YEONJI/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/teethxml.xml" value="0.239" />
+        <entry key="..\:/Users/YEONJI/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_calendar.xml" value="0.22735507246376813" />
+        <entry key="..\:/Users/YEONJI/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_custom_dialog.xml" value="0.2390625" />
+        <entry key="..\:/Users/YEONJI/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_listitem.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/YEONJI/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/YEONJI/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_note.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/YEONJI/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_teethbrushing.xml" value="0.2390625" />
+        <entry key="..\:/Users/YEONJI/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_test.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/YEONJI/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/listview_item.xml" value="0.17905982905982906" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

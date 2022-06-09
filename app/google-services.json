@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "755201340178",
+    "firebase_url": "https://tbalarm-a0e5e-default-rtdb.firebaseio.com",
+    "project_id": "tbalarm-a0e5e",
+    "storage_bucket": "tbalarm-a0e5e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755201340178:android:d48a387c29c688e5e0b9cb",
+        "android_client_info": {
+          "package_name": "com.example.myapplication2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "755201340178-jscql5amr813etj1pn471e328a1a7lf6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjBzQEwbDJ0dVQuVivA1ZfSWkEJ3FnqYY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "755201340178-jscql5amr813etj1pn471e328a1a7lf6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

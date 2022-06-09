@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_Note">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/title"
+            android:orientation="horizontal"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="629dp">
+
+            <TextView
+                android:id="@+id/Title"
+                android:layout_width="332dp"
+                android:layout_height="60dp"
+                android:background="@color/title"
+                android:gravity="center"
+                android:text="         teeThIME"
+                android:textColor="#455A64"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/button_point"
+                android:layout_width="340dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00ff0000"
+
+                android:drawableBottom="@drawable/teethxml"
+                android:textColor="#4E342E" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/title"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/button_Home"
+                android:layout_width="103dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="0dp"
+                android:backgroundTint="@color/title"
+                app:icon="@drawable/homexml"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button_Tbushing"
+                android:layout_width="103dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="0dp"
+                android:backgroundTint="@color/title"
+                app:icon="@drawable/brushingxml"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.341"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button_Calendar"
+                android:layout_width="103dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="0dp"
+                android:backgroundTint="@color/title"
+                app:icon="@drawable/calanderxml"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.677"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button_Mypage"
+                android:layout_width="103dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="00dp"
+                android:backgroundTint="@color/title"
+                app:icon="@drawable/mapagexml"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="387dp"
+        android:layout_height="500dp"
+        android:background="@color/note"
+        android:backgroundTint="@color/note"
+        android:gravity="center_vertical"
+        android:text="1. 양치할 때는 물의 온도, 양치 횟수, 헷구는 횟수가 중요합니다!\n
+2. 커피를 먹고 나서 양치를 하려면 입을 헹구고 30분 뒤에 양치하는 것이 좋아요.\n
+3. 신 과일은 산성이 높기 때문에 30분 뒤에 양치질을 하는 것이 좋아요!\n
+ └ 산성은 치아에 상처를 내고 바로 양치를 하면 그 상처가 벌어질 수 있어 위험해요!\n
+4. 칫솔은 습한 환경에 있으면 바이러스가 증식돼요!\n
+ └ 양치를 다 하면 칫솔에 물기를 열심히 제거하고 소독기에 넣어서 보관하는 것이 좋아요!\n
+5. 교정이나 잇몸 질환이 있는 환자는 의사와 상담 후 올바른 칫솔질을 해야 해요!\n
+ └ 주변에 있는 치과를 알아보기 권장해요.\n
+6. 탄산음료 섭취 후 30분 뒤에 양치해야 돼요!\n
+ └ 탄산음료도 산성있으니 조심해야 돼요!\n
+7. 치약은 칫솔모의 1/4정도만 짜는 것이 좋아요!\n
+8. 칫솔은 3개월마다 교체하는 것을 권장해요.\n
+ └ 칫솔에 세균이 증식되었을 수도 있고 쓰는 힘에 따라 칫솔모가 망가져 있는 정도를 확인해야 돼요!\n
+**홈화면으로 돌아가려면 이 아이콘을 누르세요"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.354" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
