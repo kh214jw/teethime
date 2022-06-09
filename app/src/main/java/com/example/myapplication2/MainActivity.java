@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        //ㅇㄹㅇㄹㄴㅇ
         //상단 양치 여부 확인 html버튼 btsendTb
         button_Tbushing = (Button) findViewById(R.id.button_Tbushing);
         button_Tbushing.setOnClickListener(new View.OnClickListener() {
