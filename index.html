@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeeThIME</title>
+</head>
+<body>
+    <div>양치를 잘 하고 계신가요? AI가 판독해드려요!</div>
+    <div>양치시간은 2분을 유지해야 됩니다. 핸드폰 안 본 상태로 양치에 집중해주세요!</div>
+<button type="button" onclick="init()">Start</button>
+<div id="label-container"></div>
+<p></p>
+<p></p>
+<p></p>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.4.0/dist/speech-commands.min.js"></script>
+
+<script type="text/javascript">
+    // more documentation available at
+    // https://github.com/tensorflow/tfjs-models/tree/master/speech-commands
+
+    // the link to your model provided by Teachable Machine export panel
+    const URL = "https://teachablemachine.withgoogle.com/models/iJeBHgcwq/";
+
+    let status ="배경 소음";
+    let current=document.getElementsByTagName("p")[0];//현재 상태
+    let string = document.getElementsByTagName("p")[1]; //양치소리 지속시간
+    let countsec=document.getElementsByTagName("p")[2];//된다구~ 2분 이상 지속확인
+    async function createModel() {
+        const checkpointURL = URL + "model.json"; // model topology
+        const metadataURL = URL + "metadata.json"; // model metadata
+
+        const recognizer = speechCommands.create(
+            "BROWSER_FFT", // fourier transform type, not useful to change
+            undefined, // speech commands vocabulary feature, not useful for your models
+            checkpointURL,
+            metadataURL);
+
+        // check that model and metadata are loaded via HTTPS requests.
+        await recognizer.ensureModelLoaded();
+
+        return recognizer;
+    }
+
+    async function init() {
+        const recognizer = await createModel();
+        const classLabels = recognizer.wordLabels(); // get class labels
+        const labelContainer = document.getElementById("label-container");
+        for (let i = 0; i < classLabels.length; i++) {
+            labelContainer.appendChild(document.createElement("div"));
+        }
+        timer();
+        // listen() takes two arguments:
+        // 1. A callback function that is invoked anytime a word is recognized.
+        // 2. A configuration object with adjustable fields
+        recognizer.listen(result => {
+            const scores = result.scores; // probability of prediction for each class
+            // render the probability scores per class
+            for (let i = 0; i < classLabels.length; i++) {
+                const classPrediction = classLabels[i] + ": " + result.scores[i].toFixed(2);
+                labelContainer.childNodes[i].innerHTML = classPrediction;
+            }
+            if(0.75<=result.scores[0]){
+                status=classLabels[0];
+            }//양치소리
+            else if(0.8<=result.scores[1]){
+                status =classLabels[1];
+            }//가글
+            else{
+                status=classLabels[2];
+            }//배경소음
+            current.innerHTML="AI가 "+status+"(으)로 인식했어요!";
+
+        }, {
+            includeSpectrogram: true, // in case listen should return result.spectrogram
+            probabilityThreshold: 0.75,
+            invokeCallbackOnNoiseAndUnknown: true,
+            overlapFactor: 0.50 // probably want between 0.5 and 0.75. More info in README
+        });
+        function timer(){
+            let second = 0;
+            let time = setInterval(function(){
+                if(status=="양치소리"){//상태가 양치소리면
+                    second++;//초를 더해줌   
+                }
+                string.innerHTML="양치소리가 지속된 시간은"+second+"초 입니다.";
+            },1000);
+            let counting = setInterval(function(){
+                if(second>=120){
+                    countsec.innerHTML= "양치 지속이 2분을 넘었습니다! 잘하셨어요!";}
+            });
+        }
+        //타이머 참고 링크 : https://howbeautifulworld.tistory.com/m/42
+    }
+
+        // Stop the recognition in 5 seconds.
+        // setTimeout(() => recognizer.stopListening(), 5000);
+    
+    
+</script>
+
+</body>
+</html>
